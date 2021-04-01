@@ -79,17 +79,50 @@
 
 
 // 4.請寫一個函式 table，接收一個數字 n，印出 n*1 ~ n*9 的結果
-const table = (n) => {
-    let str = 0
-    for(let i=1; i<10; i++){
-        str = n * i
-        console.log(`${n} * ${i} = ${str}`)
-    }
-}
-table(1)
+// const table = (n) => {
+//     let str = 0
+//     for(let i=1; i<10; i++){
+//         str = n * i
+//         console.log(`${n} * ${i} = ${str}`)
+//     }
+// }
+// table(1)
 
 
 
 // 5.請寫出一個 function table9to9，並列出 1*1 ~ 9*9。 (99乘法表)
+// const table99 = () => {
+    
+//     for(let i=1; i<10; i++){
+//         for(let j=1; j<10; j++){
+            
+//             console.log(`${i} * ${j} = ${i*j}`)
+//         }
+//     }
+// }
+
+// table99()
+// 正常解法
+
+const table99 = () => {
+    let arr1 = []
+    let arr = []
+    let sum = ""
+    for(let i=1; i<10; i++){
+        for(let j=1; j<10; j++){
+
+            sum = j + "*" + i + " = " + i*j
+            arr1.push(sum)
+            // console.log(sum) 
+        }
+        arr.push(arr1)
+        arr1=[]
+       
+    }
+        console.log(arr[0].join(". ") + "\n" + arr[1].join(" "))
+  
+}
+table99()
+// 未完待續
 
 
